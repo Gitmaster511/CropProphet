@@ -3,7 +3,7 @@ import { View, StyleSheet, FlatList, Text, TextInput, TouchableOpacity } from 'r
 import { Appbar } from 'react-native-paper';
 import axios from 'axios';
 
-const API_URL = 'https://api.openai.com/v1/chat/completions';
+const API_URL = 'https://api.openai.com/v1/chat/completions'; // Replace this with your OpenAI API endpoint
 const apiKey = ''; // Replace this with your actual API key from OpenAI
 
 const CropListScreen = () => {
@@ -15,7 +15,7 @@ const CropListScreen = () => {
   const handleAddCrop = () => {
     setCrops((prevCrops) => [...prevCrops, inputMessage]);
     setRisks((prevRisks) => [...prevRisks, '']);
-    setInputMessage(''); 
+    setInputMessage(''); // Clear the input field
   };
 
   const handleRiskChange = (index, risk) => {
@@ -64,7 +64,7 @@ const CropListScreen = () => {
     <View style={styles.container}>
       {/* Header */}
       <Appbar.Header>
-        <Appbar.Content title="Potential Risks" />
+        <Appbar.Content title="Potential" />
       </Appbar.Header>
 
       {/* Main Content */}
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   responseText: {
-    color: '#7B1FA2',
+    color: '#7B1FA2', // Light purple text color
     fontSize: 16,
   },
 });

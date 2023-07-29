@@ -47,13 +47,12 @@ const WeatherForecast = () => {
       handleFetchRisks();
     }
   }, [weatherData]);
-
   const handleFetchRisks = async () => {
     console.log(weatherData)
 
     try {
-          const weatherText = formatWeatherDataToText(weatherData); 
-          const apiKey = ''; //Add openAI api key
+          const weatherText = formatWeatherDataToText(weatherData); // Format weather data into a textual representation
+          const apiKey = ''; // Replace with your actual API key
           const url = 'https://api.openai.com/v1/chat/completions';
           const headers = {
             'Content-Type': 'application/json',

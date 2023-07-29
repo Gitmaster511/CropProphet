@@ -5,17 +5,15 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 //screens
 import Risk from './risk';
-import CameraScreen from './tensorflow_detect';
 import Forumaster from './forum/forummaster';
 import Homepage from './home';
 import WeatherForecast from './WeatherForcast';
 
-import { LogBox } from 'react-native';
+  import { LogBox } from 'react-native';
 
-LogBox.ignoreLogs(['Warning: ...']); 
+  LogBox.ignoreLogs(['Warning: ...']); //Hide warnings
 
-LogBox.ignoreAllLogs();
-
+  LogBox.ignoreAllLogs();//Hide all warning notifications on front-end
 const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
@@ -66,6 +64,9 @@ export default function App() {
           ),
         }}
       />
+
+        
+
       </Tab.Navigator>
     </NavigationContainer>
   );

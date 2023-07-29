@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, FlatList, Image, StyleSheet } from 'react-native';
-import { FontAwesome } from '@expo/vector-icons'; r
+import { FontAwesome } from '@expo/vector-icons'; // You can use any icon library you prefer
 
 
 
@@ -82,8 +82,8 @@ const styles = StyleSheet.create({
   image: {
     width: '50%',
     height: '50%',
-    justifyContent: 'center',
-    alignItems: 'center', 
+    justifyContent: 'center', // Centers vertically
+    alignItems: 'center', // Centers horizontally
     marginHorizontal: 120
     
   },
