@@ -15,7 +15,7 @@ const CropListScreen = () => {
   const handleAddCrop = () => {
     setCrops((prevCrops) => [...prevCrops, inputMessage]);
     setRisks((prevRisks) => [...prevRisks, '']);
-    setInputMessage(''); // Clear the input field
+    setInputMessage(''); 
   };
 
   const handleRiskChange = (index, risk) => {
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   responseText: {
-    color: '#7B1FA2', // Light purple text color
+    color: '#7B1FA2',
     fontSize: 16,
   },
 });

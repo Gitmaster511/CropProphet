@@ -5,27 +5,16 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 //screens
 import Risk from './risk';
-import CameraScreen from './camera';
-import ForumScreen from './forum';
-import Forumaster from './forummaster';
-import CreatePostScreen from './CreatePostScreen';
+import CameraScreen from './tensorflow_detect';
+import Forumaster from './forum/forummaster';
 import Homepage from './home';
+import WeatherForecast from './WeatherForcast';
 
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
+import { LogBox } from 'react-native';
 
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
+LogBox.ignoreLogs(['Warning: ...']); 
+
+LogBox.ignoreAllLogs();
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -54,13 +43,14 @@ export default function App() {
           ),
         }}
       />
+
       <Tab.Screen
-        name="Detect"
-        component={CameraScreen}
+        name="WeatherForecast"
+        component={WeatherForecast}
         options={{
           tabBarLabel: 'Detect',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="camera-outline" color={color} size={26} />
+            <MaterialCommunityIcons name="weather-cloudy-alert" color={color} size={26} />
           ),
         }}
       />
@@ -76,9 +66,6 @@ export default function App() {
           ),
         }}
       />
-
-        
-
       </Tab.Navigator>
     </NavigationContainer>
   );
